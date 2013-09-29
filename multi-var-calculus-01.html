@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1314 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1314 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2013</p>
+</div>
+<div class="section titleslide slide level1" id="introduction"><h1>Introduction</h1></div><div class="section slide level2" id="teaching-assessment">
+<h1>Teaching &amp; Assessment</h1>
+<ul>
+<li>Lectures (3 per week)<br /> Stephen, Killian and Stephen/Killian.<br /> 3rd lecture alternates between S &amp; K and will often serve as a large examples class.</li>
+<li>Tutorials (1 per week)<br /> Stephen, Killian or Andy<br /> Your Maths Methods tutor is also you Personal &amp; Academic Tutor</li>
+<li>Unit Content<br /> Stephen -- Linear Algebra<br /> Killian -- Analytical Methods: Multi-variable calculus; Laplace transforms; Fourier series.</li>
+<li>Assessment
+<ul>
+<li>Coursework (40%)</li>
+<li>Exam (60%)</li>
+</ul></li>
+<li>Lots of information on Moodle
+<ul>
+<li><a href="http://moodle.mmu.ac.uk/course/view.php?id=35024">Mathematical Methods Unit Moodle Area</a></li>
+<li><a href="http://moodle.mmu.ac.uk/course/view.php?id=30790">Mathematics Undergraduate Network Moodle Area</a></li>
+</ul></li>
+</ul>
+</div><div class="section slide level2" id="analytical-methods-introduction">
+<h1>Analytical Methods \\ introduction</h1>
+<p>We will cover three main areas</p>
+<ul>
+<li>Multi-variable calculus<br /> <em>The differentiation and integration of functions of more than one variable.</em></li>
+<li>Laplace Transforms<br /> <em>A method for solving certain differential equations using a transform of the unknown function.</em></li>
+<li>Fourier Series and Transform<br /> <em>A method to decompose a wide class of functions into an infinite series of standard periodic functions (sines and cosines).</em></li>
+</ul>
+</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="definition-of-derivative-of-a-function-of-a-single-variable-sec.-1.1">Definition of derivative of a function of a single variable (sec. 1.1)</h3>
+<p>Recall that for a function, <span class="math">\(f: \mathbb{R} \to \mathbb{R}\)</span>, of a single variable the derivative, <span class="math">\(f&#39;(a)\)</span>, of <span class="math">\(f\)</span> at a point <span class="math">\(a\)</span> is defined by <span class="math">\[f&#39;(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}.\]</span></p>
+<p>An equivalent formulation of the definition, using alterntaive notation, is <span class="math">\[
+\frac{df}{dx} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}.
+\]</span></p>
+</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-1">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="defintion-of-partial-derivative-for-function-of-two-variables-sec.-1.2">Defintion of partial derivative (for function of two-variables) (sec. 1.2)</h3>
+<p>Let <span class="math">\(f\)</span> be a function of the two independent variables <span class="math">\(x\)</span> and <span class="math">\(y\)</span>. The <em>partial derivative</em>, <span class="math">\(\frac{ \partial f}{\partial x}\)</span>, of <span class="math">\(f\)</span> <em>with respect to</em> <span class="math">\(x\)</span> is defined as <span class="math">\[
+\frac{\partial f}{\partial x} = \lim_{\delta x \to 0} \frac{f(x + \delta x, y) - f(x,y)}{\delta x}.
+\]</span></p>
+<p>Similarly we can define the partial derivative of <span class="math">\(f\)</span> with respect to the other variable. The <em>partial derivative</em>, <span class="math">\(\frac{ \partial f}{\partial y}\)</span>, of <span class="math">\(f\)</span> <em>with respect to</em> <span class="math">\(y\)</span> is defined as <span class="math">\[
+\frac{\partial f}{\partial y} = \lim_{\delta y \to 0} \frac{f(x , y+ \delta y) - f(x,y)}{\delta y}.
+\]</span></p>
+</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-2">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="example-1.1-sec.-1.2">Example 1.1 (sec. 1.2)</h3>
+<p>Consider the function <span class="math">\(f\)</span> defined by <span class="math">\[f(x,y) = x^2 y.\]</span> The partial derivatives are evaluated as follows, <span class="math">\[\begin{align}
+\frac{\partial f}{\partial x} 
+&amp;= \lim_{\delta x \to 0} \frac{f(x + \delta x, y) - f(x,y)}{\delta x} ,\\
+&amp;= \lim_{\delta x \to 0} \frac{\left ( x + \delta x \right )^2 y - x^2 y}{\delta x} ,\\
+&amp;= \lim_{\delta x \to 0} \frac{2x \delta x + (\delta x)^2}{\delta x} y ,\\
+&amp;= \lim_{\delta x \to 0} ( 2x + \delta x ) y ,\\
+&amp;= 2xy.
+\end{align}
+\]</span> A similar calculation will show that <span class="math">\[ \frac{ \partial f}{\partial y} = x^2. \]</span></p>
+</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-3">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<blockquote>
+<p>when differentiating a multi-variable function, <span class="math">\(f\)</span> say, with respect to the variable <span class="math">\(x\)</span>, we treat the other variables as if they were constants, so that <span class="math">\(f\)</span> becomes a function of the single-variable <span class="math">\(x\)</span>, and then differentiate <span class="math">\(f\)</span> using the standard one-variable differentiation techniques</p>
+</blockquote>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+ ---></p>
+</div>
+</body>
+</html>
