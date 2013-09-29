@@ -76,6 +76,9 @@ A similar calculation will show that
 $$ \frac{ \partial f}{\partial y} = x^2. $$
 
 ## Multi-variable calculus \\\\ the partial derivative
+
+In practice we make use of all the standard derivatives and properties of differentiation that we have from the one-variable case, along with the following principle:
+
 >when differentiating a multi-variable function, $f$ say, with respect to the variable $x$, we treat the other variables as if they were constants, so that $f$ becomes a function of the single-variable $x$, and then differentiate $f$ using the standard one-variable differentiation techniques
  
  
