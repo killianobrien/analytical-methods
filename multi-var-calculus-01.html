@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
-   href="mycss.css" />
+   href=".\mycss.css" />
   <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
       <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
@@ -38,7 +38,7 @@ Killian O'Brien
   </p>
   <p class="date">Sep 2013</p>
 </div>
-<div class="section titleslide slide level1" id="introduction"><h1>Introduction</h1></div><div class="section slide level2" id="teaching-assessment">
+<div id="introduction" class="titleslide slide section level1"><h1>Introduction</h1></div><div id="teaching-assessment" class="slide section level2">
 <h1>Teaching &amp; Assessment</h1>
 <ul>
 <li>Lectures (3 per week)<br /> Stephen, Killian and Stephen/Killian.<br /> 3rd lecture alternates between S &amp; K and will often serve as a large examples class.</li>
@@ -55,7 +55,7 @@ Killian O'Brien
 <li><a href="http://moodle.mmu.ac.uk/course/view.php?id=30790">Mathematics Undergraduate Network Moodle Area</a></li>
 </ul></li>
 </ul>
-</div><div class="section slide level2" id="analytical-methods-introduction">
+</div><div id="analytical-methods-introduction" class="slide section level2">
 <h1>Analytical Methods \\ introduction</h1>
 <p>We will cover three main areas</p>
 <ul>
@@ -63,14 +63,14 @@ Killian O'Brien
 <li>Laplace Transforms<br /> <em>A method for solving certain differential equations using a transform of the unknown function.</em></li>
 <li>Fourier Series and Transform<br /> <em>A method to decompose a wide class of functions into an infinite series of standard periodic functions (sines and cosines).</em></li>
 </ul>
-</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative">
+</div><div id="multi-variable-calculus-the-partial-derivative" class="slide section level2">
 <h1>Multi-variable calculus \\ the partial derivative</h1>
 <h3 id="definition-of-derivative-of-a-function-of-a-single-variable-sec.-1.1">Definition of derivative of a function of a single variable (sec. 1.1)</h3>
 <p>Recall that for a function, <span class="math">\(f: \mathbb{R} \to \mathbb{R}\)</span>, of a single variable the derivative, <span class="math">\(f&#39;(a)\)</span>, of <span class="math">\(f\)</span> at a point <span class="math">\(a\)</span> is defined by <span class="math">\[f&#39;(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}.\]</span></p>
 <p>An equivalent formulation of the definition, using alterntaive notation, is <span class="math">\[
 \frac{df}{dx} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}.
 \]</span></p>
-</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-1">
+</div><div id="multi-variable-calculus-the-partial-derivative-1" class="slide section level2">
 <h1>Multi-variable calculus \\ the partial derivative</h1>
 <h3 id="defintion-of-partial-derivative-for-function-of-two-variables-sec.-1.2">Defintion of partial derivative (for function of two-variables) (sec. 1.2)</h3>
 <p>Let <span class="math">\(f\)</span> be a function of the two independent variables <span class="math">\(x\)</span> and <span class="math">\(y\)</span>. The <em>partial derivative</em>, <span class="math">\(\frac{ \partial f}{\partial x}\)</span>, of <span class="math">\(f\)</span> <em>with respect to</em> <span class="math">\(x\)</span> is defined as <span class="math">\[
@@ -79,7 +79,7 @@ Killian O'Brien
 <p>Similarly we can define the partial derivative of <span class="math">\(f\)</span> with respect to the other variable. The <em>partial derivative</em>, <span class="math">\(\frac{ \partial f}{\partial y}\)</span>, of <span class="math">\(f\)</span> <em>with respect to</em> <span class="math">\(y\)</span> is defined as <span class="math">\[
 \frac{\partial f}{\partial y} = \lim_{\delta y \to 0} \frac{f(x , y+ \delta y) - f(x,y)}{\delta y}.
 \]</span></p>
-</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-2">
+</div><div id="multi-variable-calculus-the-partial-derivative-2" class="slide section level2">
 <h1>Multi-variable calculus \\ the partial derivative</h1>
 <h3 id="example-1.1-sec.-1.2">Example 1.1 (sec. 1.2)</h3>
 <p>Consider the function <span class="math">\(f\)</span> defined by <span class="math">\[f(x,y) = x^2 y.\]</span> The partial derivatives are evaluated as follows, <span class="math">\[\begin{align}
@@ -91,12 +91,59 @@ Killian O'Brien
 &amp;= 2xy.
 \end{align}
 \]</span> A similar calculation will show that <span class="math">\[ \frac{ \partial f}{\partial y} = x^2. \]</span></p>
-</div><div class="section slide level2" id="multi-variable-calculus-the-partial-derivative-3">
+</div><div id="multi-variable-calculus-the-partial-derivative-3" class="slide section level2">
 <h1>Multi-variable calculus \\ the partial derivative</h1>
 <p>In practice we make use of all the standard derivatives and properties of differentiation that we have from the one-variable case, along with the following principle:</p>
 <blockquote>
 <p>when differentiating a multi-variable function, <span class="math">\(f\)</span> say, with respect to the variable <span class="math">\(x\)</span>, we treat the other variables as if they were constants, so that <span class="math">\(f\)</span> becomes a function of the single-variable <span class="math">\(x\)</span>, and then differentiate <span class="math">\(f\)</span> using the standard one-variable differentiation techniques</p>
 </blockquote>
+<h3 id="example-1.2">Example 1.2</h3>
+<p>Consider the function <span class="math">\(f\)</span> defined by <span class="math">\[ f(x,y) = x^2 y^3 \tan{(2x)} ,\]</span> and find its partial derivative <span class="math">\(\frac{\partial f}{\partial x}\)</span> and <span class="math">\(\frac{\partial f}{\partial y}\)</span>.</p>
+<h3 id="checking-your-work">Checking your work</h3>
+<ul>
+<li>Verify your work with others</li>
+<li>Use Matlab</li>
+</ul>
+<pre><code>&gt;&gt; syms x y
+&gt;&gt; diff(x^2*y^3*tan(2*x),x)
+
+ans =
+ 
+x^2*y^3*(2*tan(2*x)^2 + 2) + 2*x*y^3*tan(2*x)</code></pre>
+<ul>
+<li>Use a <a href="http://sagecell.sagemath.org">Sage cell</a></li>
+</ul>
+<div class="compute"><script type="text/x-sage">
+var('x,y');
+f(x,y)=x^2 * y^3 * tan(2*x);
+show(diff(f,x))
+</script></div>
+
+</div><div id="multi-variable-calculus-the-partial-derivative-4" class="slide section level2">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="alternative-notation-pg.-23">Alternative notation (pg. 2,3)</h3>
+<p>The derivatives <span class="math">\(\frac{\partial f}{\partial x}\)</span> and <span class="math">\(\frac{\partial f}{\partial y}\)</span> can also be written <span class="math">\(f_x\)</span> and <span class="math">\(f_y\)</span> respectively. Makes it easier to refer to values of the drivative, e.g. <span class="math">\[ f_x (0.1,4.5) \text{ as opposed to } \left. \frac{\partial f}{\partial x} \right |_{(x,y)=(0.1,4.5)} .\]</span></p>
+<p>However the delta notation lends itself to seeing differentiation as an <em>operator</em> applied to a function, i.e. <span class="math">\[ \frac{\partial }{\partial x} \left ( \cos(xy) \right ) = -y\sin(xy).\]</span></p>
+</div><div id="multi-variable-calculus-the-partial-derivative-5" class="slide section level2">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="graphical-interpretation">Graphical interpretation</h3>
+<p>Let <span class="math">\((x,y,z)\)</span> be the usual Cartesian coordinate system for <span class="math">\(\mathbb{R}^3\)</span>. The equation z = f(x,y), defines a surface in <span class="math">\(\mathbb{R}^3\)</span>. For each pair <span class="math">\((a,b)\)</span>, the value of <span class="math">\(z=f(a,b)\)</span> gives the height of the surface above or below (accordingly as <span class="math">\(z\)</span> is positive or negative) the <span class="math">\((x,y)\)</span>-plane. An example is shown in figure 1.1 (pg. 3) When evaluated at the point <span class="math">\((a,b)\)</span>, the partial derivatives, <span class="math">\[
+\left. \frac{\partial f}{\partial x} \right |_{(x,y)=(a,b)}, \text{ and } 
+\left. \frac{\partial f}{\partial y} \right |_{(x,y)=(a,b)},
+\]</span> give the gradient of the surface at the point <span class="math">\((a,b)\)</span> in the <span class="math">\(x\)</span> and <span class="math">\(y\)</span> directions respectively.</p>
+</div><div id="multi-variable-calculus-the-partial-derivative-6" class="slide section level2">
+<h1>Multi-variable calculus \\ the partial derivative</h1>
+<h3 id="recommended-reading-and-suggested-activities">Recommended reading and suggested activities</h3>
+<ul>
+<li><p>Revise ordinary (one variable) derivatives: derivatives of standard functions, properties of the derivative (linearity, product rule, quotient rule, chain rule, ... )</p></li>
+<li><p><a href="http://prism.talis.com/mmu/items/1954431"><em>Schaum's Outlines of Calculus</em></a> by Ayres &amp; Mendelson: Chapter 48 Partial Derivatives</p></li>
+<li><p>Notes: Read section 1.4 and begin Exercise 1.1 Qs. 1,2,3</p></li>
+<li><p>Explore Matlab commands: <code>diff</code>, <code>ezsurf</code>, <code>ezplot3</code>, ...</p></li>
+</ul>
+<p>Learning about the Sage software is not a requirement of the course. I will use it mainly for showing examples in lectures and verifying calculations. However if you are interested in mathematics on the computer and in programming then you should definately explore it.</p>
+<ul>
+<li>Explore Sage, <a href="http://www.sagemath.org"><code>www.sagemath.org</code></a> and <a href="http://cloud.sagemath.org"><code>cloud.sagemath.org</code></a></li>
+</ul>
 <p><!--- 
  <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
 @interact
@@ -108,6 +155,9 @@ def tline(ep=slider(0.0001,4,0.1,0)):
           q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
           (p+q).show();
 </script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
  ---></p>
 </div>
 </body>

@@ -80,6 +80,96 @@ $$ \frac{ \partial f}{\partial y} = x^2. $$
 In practice we make use of all the standard derivatives and properties of differentiation that we have from the one-variable case, along with the following principle:
 
 >when differentiating a multi-variable function, $f$ say, with respect to the variable $x$, we treat the other variables as if they were constants, so that $f$ becomes a function of the single-variable $x$, and then differentiate $f$ using the standard one-variable differentiation techniques
+
+### Example 1.2 
+
+Consider the function $f$ defined by 
+$$ f(x,y) = x^2 y^3 \tan{(2x)} ,$$
+and find its partial derivative $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$.
+
+### Checking your work
+
+* Verify your work with others
+* Use Matlab
+
+~~~
+>> syms x y
+>> diff(x^2*y^3*tan(2*x),x)
+
+ans =
+ 
+x^2*y^3*(2*tan(2*x)^2 + 2) + 2*x*y^3*tan(2*x)
+~~~
+
+* Use a [Sage cell](http://sagecell.sagemath.org)
+
+<div class="compute"><script type="text/x-sage">
+var('x,y');
+f(x,y)=x^2 * y^3 * tan(2*x);
+show(diff(f,x))
+</script></div>
+
+## Multi-variable calculus \\\\ the partial derivative
+
+### Alternative notation (pg. 2,3)
+
+The derivatives $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ can also be written $f_x$ and $f_y$ respectively. Makes it easier to refer to values of the drivative, e.g. 
+$$ f_x (0.1,4.5) \text{ as opposed to } \left. \frac{\partial f}{\partial x} \right |_{(x,y)=(0.1,4.5)} .$$
+
+However the delta notation lends itself to seeing differentiation as an *operator* applied to a function, i.e.
+$$ \frac{\partial }{\partial x} \left ( \cos(xy) \right ) = -y\sin(xy).$$
+
+## Multi-variable calculus \\\\ the partial derivative
+
+### Graphical interpretation
+
+Let $(x,y,z)$ be the usual Cartesian coordinate system for $\mathbb{R}^3$. The equation 
+\beq 
+z = f(x,y),
+\eeq
+defines a surface in $\mathbb{R}^3$. For each pair $(a,b)$, the value of $z=f(a,b)$ gives the height of the surface above or below (accordingly as $z$ is positive or negative) the $(x,y)$-plane. An example is shown in figure 1.1 (pg. 3)
+When evaluated at the point $(a,b)$, the partial derivatives,
+$$
+\left. \frac{\partial f}{\partial x} \right |_{(x,y)=(a,b)}, \text{ and } 
+\left. \frac{\partial f}{\partial y} \right |_{(x,y)=(a,b)},
+$$
+give the gradient of the surface at the point $(a,b)$ in the $x$ and $y$ directions respectively. 
+
+## Multi-variable calculus \\\\ the partial derivative
+
+### Recommended reading and suggested activities
+
+* Revise ordinary (one variable) derivatives: derivatives of standard functions, properties of the derivative (linearity, product rule, quotient rule, chain rule, ... )
+
+* [*Schaum's Outlines of Calculus*](http://prism.talis.com/mmu/items/1954431) by Ayres & Mendelson: Chapter 48 Partial Derivatives
+
+* Notes: Read section 1.4 and begin Exercise 1.1 Qs. 1,2,3
+
+* Explore Matlab commands: `diff`, `ezsurf`, `ezplot3`, ...
+
+Learning about the Sage software is not a requirement of the course. I will use it mainly for showing examples in lectures and verifying calculations. However if you are interested in mathematics on the computer and in programming then you should definately explore it.
+
+* Explore Sage, [`www.sagemath.org`](http://www.sagemath.org) and [`cloud.sagemath.org`](http://cloud.sagemath.org)
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -94,4 +184,7 @@ def tline(ep=slider(0.0001,4,0.1,0)):
           q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
           (p+q).show();
 </script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
  --->
