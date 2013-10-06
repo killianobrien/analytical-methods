@@ -87,6 +87,14 @@ $$\begin{align}
 \end{align}$$
 These results show how the equation of a tangent plane, can be determined from the function, $f$, defining the surface and the base point $(x_P, y_P)$. 
 
+### Example 1.5
+
+Determine the tangent plane to the surface defined by
+$$
+z = x^2 y + 2y^2 + x + 1 ,
+$$
+at the point $(x,y)=(2,3)$.
+
 <div class="compute"><script type="text/x-sage">
 f(x,y)=x^2 * y + 2*y^2 + x + 1 ;
 p=plot3d(f(x,y), (x, -10, 14), (y, -10, 16), opacity=0.8)

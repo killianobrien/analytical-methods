@@ -96,6 +96,10 @@ z = \alpha x + \beta y + \gamma \label{E:plane},
 &amp; z_p = \alpha  x_P + \beta y_P + \gamma = f(x_P, y_P), \\
 \Rightarrow &amp; \gamma = f(x_P, y_P) - \alpha x_P - \beta y_P. \label{E:planegamma}
 \end{align}\]</span> These results show how the equation of a tangent plane, can be determined from the function, <span class="math">\(f\)</span>, defining the surface and the base point <span class="math">\((x_P, y_P)\)</span>.</p>
+<h3 id="example-1.5">Example 1.5</h3>
+<p>Determine the tangent plane to the surface defined by <span class="math">\[
+z = x^2 y + 2y^2 + x + 1 ,
+\]</span> at the point <span class="math">\((x,y)=(2,3)\)</span>.</p>
 <div class="compute"><script type="text/x-sage">
 f(x,y)=x^2 * y + 2*y^2 + x + 1 ;
 p=plot3d(f(x,y), (x, -10, 14), (y, -10, 16), opacity=0.8)
