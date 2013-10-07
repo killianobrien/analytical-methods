@@ -11,7 +11,7 @@ $$ \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} =
 2. Demonstrate that the function $\psi$ defined by 
 $$\psi(x,y,t) = e^{-t} \left ( \sin x + \cos y \right )$$
 is a solution of the partial differential equation 
-$$\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} = \frac{\partial z}{\partial t}.$$
+$$\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} = \frac{\partial \psi}{\partial t}.$$
 
 3. Find all the locations $(x,y)$ where the two partial derivatives $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ are simultaneously zero, where $f$ is the function defined by 
 $$f(x,y) = \cos \left ( x^2 + y^2 \right ).$$
