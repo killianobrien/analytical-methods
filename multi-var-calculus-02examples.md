@@ -25,6 +25,13 @@ which describes the distribution of heat in a region at time $t$. Show that the 
 $$u(x,t) = e^{- \beta t} \sin(\alpha x)$$
 is a solution of the heat equation when a certain relationship holds between the paramenters $\alpha$ and $\beta$.
 
+6. Consider a general triangle with angles $A,B,C$ and sides of length $a,b,c$ as shown
+
+![Triangle](triangle.png)
+
+Find an expression that give the rate of change of angle $A$ as the side length $a$ is varied, but $b$ and $c$ kept fixed. To do this make use of implicit differentiation and the cosine formula 
+$$a^2 = b^2 + c^2 -2bc \cos A .$$
+
 
 <div class="compute"><script type="text/x-sage">
 
