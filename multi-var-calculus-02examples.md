@@ -19,6 +19,13 @@ $$f(x,y) = \cos \left ( x^2 + y^2 \right ).$$
 4. Use the technique of implicit (partial) differentiation to find expressions for $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$ where $x,y,z$ are related by the equation 
 $$xy + yz + zx = 1 .$$
 
+5. Consider the 1-dimensional heat equation 
+$$\frac{\partial u}{\partial t} - \frac{\partial^2 u}{\partial x^2} = 0$$
+which describes the distribution of heat in a region at time $t$. Show that the function $u$ defined by 
+$$u(x,t) = e^{- \beta t} \sin(\alpha x)$$
+is a solution of the heat equation when a certain relationship holds between the paramenters $\alpha$ and $\beta$.
+
+
 <div class="compute"><script type="text/x-sage">
 
 </script></div>
