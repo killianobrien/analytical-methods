@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1314 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1314 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2013</p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-example-problems" class="slide section level2">
+<h1>Multi-variable calculus \\ Example problems</h1>
+<ol style="list-style-type: decimal">
+<li><p>Demonstrate that the function <span class="math">\(\phi\)</span> defined by <span class="math">\[\phi(x,y)=e^x \sin(y)\]</span> is a solution of the Laplace's partial differential equation <span class="math">\[ \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} = 0.\]</span></p></li>
+<li><p>Demonstrate that the function <span class="math">\(\psi\)</span> defined by <span class="math">\[\psi(x,y,t) = e^{-t} \left ( \sin x + \cos y \right )\]</span> is a solution of the partial differential equation <span class="math">\[\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} = \frac{\partial z}{\partial t}.\]</span></p></li>
+<li><p>Find all the locations <span class="math">\((x,y)\)</span> where the two partial derivatives <span class="math">\(\frac{\partial f}{\partial x}\)</span> and <span class="math">\(\frac{\partial f}{\partial y}\)</span> are simultaneously zero, where <span class="math">\(f\)</span> is the function defined by <span class="math">\[f(x,y) = \cos \left ( x^2 + y^2 \right ).\]</span></p></li>
+<li><p>Use the technique of implicit (partial) differentiation to find expressions for <span class="math">\(\frac{\partial z}{\partial x}\)</span> and <span class="math">\(\frac{\partial z}{\partial y}\)</span> where <span class="math">\(x,y,z\)</span> are related by the equation <span class="math">\[xy + yz + zx = 1 .\]</span></p></li>
+</ol>
+<div class="compute"><script type="text/x-sage">
+
+</script></div>
+ 
+
+
+
+
+
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>
