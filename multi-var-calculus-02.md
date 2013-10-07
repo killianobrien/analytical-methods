@@ -103,6 +103,8 @@ q=plot3d(12 * x + 16 * y - 37, (x, -10, 14), (y, -10, 16), color='red', opacity=
 show(p+q)
 </script></div>
 
+![Tangent Plane plot](https://www.dropbox.com/s/ni1plhc3udyyxcj/tangent-plane.png)
+
 
 
 
