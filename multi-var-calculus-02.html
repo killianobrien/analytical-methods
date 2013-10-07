@@ -38,7 +38,7 @@ Killian O'Brien
   </p>
   <p class="date">Oct 2013</p>
 </div>
-<div class="section titleslide slide level1" id="multi-variable-calculus"><h1>Multi-variable calculus</h1></div><div class="section slide level2" id="multi-variable-calculus-higher-order-derivatives-sec.-1.4">
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-higher-order-derivatives-sec.-1.4" class="slide section level2">
 <h1>Multi-variable calculus \\ Higher-order derivatives (sec. 1.4)</h1>
 <p>For a function, <span class="math">\(f\)</span> of two variables, <span class="math">\(x\)</span> and <span class="math">\(y\)</span>, the second-order derivatives are denoted by <span class="math">\[\begin{align} 
 \frac{ \partial^2 f }{\partial x^2} &amp;= \frac{\partial}{\partial x} \left ( \frac{\partial f}{\partial x} \right ) , \\
@@ -61,7 +61,7 @@ f(x,y) = x^2 * y^3 * tan(2*x)
 diff(f,x,x)
 </script></div>
 
-</div><div class="section slide level2" id="multi-variable-calculus-clairauts-theorem-functions-of-more-than-two-variables">
+</div><div id="multi-variable-calculus-clairauts-theorem-functions-of-more-than-two-variables" class="slide section level2">
 <h1>Multi-variable calculus \\ Clairaut's Theorem &amp; functions of more than two variables</h1>
 <p>Note that <span class="math">\(\frac{ \partial^2 f }{\partial x \partial y} \)</span> = <span class="math">\(\frac{ \partial^2 f }{\partial y \partial x}\)</span>. This is true in general for functions whose derivatives exist and are continuous.</p>
 <h3 id="theorem-1.1-clairaut">Theorem 1.1 (Clairaut)</h3>
@@ -80,7 +80,7 @@ g(x,y,z) = x^2 * y^4 * z^3
 show(diff(g,z))
 </script></div>
 
-</div><div class="section slide level2" id="multi-variable-calculus-tangent-planes">
+</div><div id="multi-variable-calculus-tangent-planes" class="slide section level2">
 <h1>Multi-variable calculus \\ Tangent planes</h1>
 <h3 id="tangent-plane-to-a-surface-sec.-1.6">Tangent plane to a surface (sec. 1.6)</h3>
 <p>Let <span class="math">\((x,y,z)\)</span> be the usual Cartesian coordinate system for <span class="math">\(\mathbb{R}^3\)</span> and let <span class="math">\(S\)</span> be the surface in <span class="math">\(\mathbb{R}^3\)</span> defined by an equation <span class="math">\[
@@ -108,40 +108,12 @@ q=plot3d(12 * x + 16 * y - 37, (x, -10, 14), (y, -10, 16), color='red', opacity=
 show(p+q)
 </script></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>Or using Matlab</p>
+<pre><code>&gt;&gt; ezmesh(&#39;x^2*y + 2*y^2 + x + 1&#39;, [-6,10, -5,11])
+&gt;&gt; hold on
+&gt;&gt; ezmesh(&#39;12*x + 16*y - 37&#39;,[-6,10, -5,11])
+&gt;&gt; hold off</code></pre>
+<p><a href="https://www.dropbox.com/s/chetxze80whyni8/tangent-plane.jpg">Link to figure</a></p>
 <p><!--- 
  <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
 @interact
