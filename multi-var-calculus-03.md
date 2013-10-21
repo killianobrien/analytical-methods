@@ -172,6 +172,60 @@ $$\mathcal{F} = x \, \pderiv{f}{x} + y \, \pderiv{f}{y} ,
 $$
 into polar coordinates.
 
+## Multi-variable calculus \\\\ Chain Rule & Jacobians (sec. 1.8)
+
+### The Jacobian
+
+The chain rule equations can be expressed very neatly in matrix form, for instance in the two-variable case they become the single matrix equation
+$$
+\left (
+\begin{array}{cc}
+\pderiv{f}{s} & \pderiv{f}{t}
+\end{array} \right ) 
+= \left (
+\begin{array}{cc}
+\pderiv{f}{x} & \pderiv{f}{y}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} & \pderiv{x}{t} \\
+\pderiv{y}{s} & \pderiv{y}{t}
+\end{array} \right ) ,$$
+or expressed the other way round as
+$$
+\left (
+\begin{array}{cc}
+\pderiv{f}{x} & \pderiv{f}{y}
+\end{array} \right ) 
+= \left (\begin{array}{cc}
+\pderiv{f}{s} & \pderiv{f}{t}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} & \pderiv{x}{t} \\
+\pderiv{y}{s} & \pderiv{y}{t}
+\end{array} \right )^{-1}, $$
+(assuming of course that this inverse matrix exists).
+
+The $2 \times 2$ matrix of partial derivatives of the transformation between the coordinate systems $(x,y)$ and $(s,t)$ here is called a Jacobian matrix. Also important is the determinant of this matrix which is called the Jacobian determinant and denoted as 
+$$ 
+\frac{\partial (x,y)}{\partial (s,t)} = \left | \mathcal{J} \right | = \left |
+\begin{array}{cc}
+\pderiv{x}{s} & \pderiv{x}{t} \\
+\pderiv{y}{s} & \pderiv{y}{t}
+\end{array} \right | .
+$$
+We will make use of the Jacobian determinant later in section \ref{S:coordchange} when changing coordinate systems in various integrals. The Jacobian has the natural generalisation to any number of variables, as in the following definition.
+
+### Definition 1.7 (Jacobian matrix / determinant)
+Let $n \in \mathbb{Z}$, $n \geq 1$. The Jacobian matrix of the transformation from the (old) coordinates $(x_1, \dots x_n)$ for $\mathbb{R}^n$ to the (new) coordinate system $(u_1 , \dots u_n)$ is the matrix 
+$$ 
+\mathcal{J} = \left ( \pderiv{x_i}{u_j} \right ),
+$$
+i.e. the entry in the $i^{th}$ row and $j^{th}$ column is $\pderiv{x_i}{u_j}$.
+
+The Jacobian determinant refers to the determinant of this matrix. Note that some authors will use the term *Jacobian* to refer to the determinant while others may use it to refer to the matrix. Care should be taken to take the correct meaning from the context.
+
 ## Suggested activities
 
 * Read the rest of section 1.8 in notes and work on Exercises 1.2 & 1.3 
@@ -180,7 +234,7 @@ into polar coordinates.
 * [*Schaum's Outlines of Calculus*](http://prism.talis.com/mmu/items/1954431) by Ayres & Mendelson: Chapter 49 Total Differential, differentiability, chain rules.
 	* includes lots of extra practice problems - some with solutions. 
  
- 
+
  
  <!--- 
  <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">

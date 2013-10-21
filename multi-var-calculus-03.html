@@ -142,6 +142,47 @@ x_i = u_i(s_1, \dots ,s_n),
 <h3 id="example-1.10">Example 1.10</h3>
 <p>Translate the expression <span class="math">\[\mathcal{F} = x \, \pderiv{f}{x} + y \, \pderiv{f}{y} , 
 \]</span> into polar coordinates.</p>
+</div><div id="multi-variable-calculus-chain-rule-jacobians-sec.-1.8-2" class="slide section level2">
+<h1>Multi-variable calculus \\ Chain Rule &amp; Jacobians (sec. 1.8)</h1>
+<h3 id="the-jacobian">The Jacobian</h3>
+<p>The chain rule equations can be expressed very neatly in matrix form, for instance in the two-variable case they become the single matrix equation <span class="math">\[
+\left (
+\begin{array}{cc}
+\pderiv{f}{s} &amp; \pderiv{f}{t}
+\end{array} \right ) 
+= \left (
+\begin{array}{cc}
+\pderiv{f}{x} &amp; \pderiv{f}{y}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right ) ,\]</span> or expressed the other way round as <span class="math">\[
+\left (
+\begin{array}{cc}
+\pderiv{f}{x} &amp; \pderiv{f}{y}
+\end{array} \right ) 
+= \left (\begin{array}{cc}
+\pderiv{f}{s} &amp; \pderiv{f}{t}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right )^{-1}, \]</span> (assuming of course that this inverse matrix exists).</p>
+<p>The <span class="math">\(2 \times 2\)</span> matrix of partial derivatives of the transformation between the coordinate systems <span class="math">\((x,y)\)</span> and <span class="math">\((s,t)\)</span> here is called a Jacobian matrix. Also important is the determinant of this matrix which is called the Jacobian determinant and denoted as <span class="math">\[ 
+\frac{\partial (x,y)}{\partial (s,t)} = \left | \mathcal{J} \right | = \left |
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right | .
+\]</span> We will make use of the Jacobian determinant later in section  when changing coordinate systems in various integrals. The Jacobian has the natural generalisation to any number of variables, as in the following definition.</p>
+<h3 id="definition-1.7-jacobian-matrix-determinant">Definition 1.7 (Jacobian matrix / determinant)</h3>
+<p>Let <span class="math">\(n \in \mathbb{Z}\)</span>, <span class="math">\(n \geq 1\)</span>. The Jacobian matrix of the transformation from the (old) coordinates <span class="math">\((x_1, \dots x_n)\)</span> for <span class="math">\(\mathbb{R}^n\)</span> to the (new) coordinate system <span class="math">\((u_1 , \dots u_n)\)</span> is the matrix <span class="math">\[ 
+\mathcal{J} = \left ( \pderiv{x_i}{u_j} \right ),
+\]</span> i.e. the entry in the <span class="math">\(i^{th}\)</span> row and <span class="math">\(j^{th}\)</span> column is <span class="math">\(\pderiv{x_i}{u_j}\)</span>.</p>
+<p>The Jacobian determinant refers to the determinant of this matrix. Note that some authors will use the term <em>Jacobian</em> to refer to the determinant while others may use it to refer to the matrix. Care should be taken to take the correct meaning from the context.</p>
 </div><div id="suggested-activities" class="slide section level2">
 <h1>Suggested activities</h1>
 <ul>
