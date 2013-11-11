@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1314 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1314 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Nov 2013</p>
+</div>
+<div class="slide section level2">
+
+<p><span class="math">\(\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}\)</span></p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-line-integrals-application-to-physics-sec.-1.13" class="slide section level2">
+<h1>Multi-variable calculus \\ Line integrals \\ Application to physics (sec. 1.13)</h1>
+<p>In general terms the work done by the force when it moves a body in the same direction of the force is <span class="math">\[
+\text{work} = \text{force} \times \text{displacement} .
+\]</span></p>
+<p>When the body moves in a direction which is not the same as that of the force then we have to consider the  of the force in the direction of movement. Suppose a force in three dimensions is modelled using the vector quantity <span class="math">\(\mathbf{F}\)</span>, <span class="math">\[
+\mathbf{F} = F_x \mathbf{i} + F_y \mathbf{j} + F_z \mathbf{k},
+\]</span> and the position of a body is given by the position vector <span class="math">\(\mathbf{r}\)</span>, <span class="math">\[
+\mathbf{r} =  r_x \mathbf{i} + r_y \mathbf{j} + r_z \mathbf{k}.
+\]</span> Then the work done when the body moves along a path <span class="math">\(C\)</span> is given by the path integral <span class="math">\[
+\begin{align}
+\text{work done} &amp;= \int\limits_C \, \mathbf{F} . d \mathbf{r} \\
+&amp;= \int\limits_C \, F_x \, dx + F_y \, dy + F_z \, dz .
+\end{align}
+\]</span></p>
+<h3 id="example-1.17">Example 1.17</h3>
+<p>A two-dimensional example. Find the work done by a force <span class="math">\[
+\mathbf{F} = (3x^2 + 4y^2 ) \mathbf{i} + (xy) \mathbf{j},
+\]</span> when it moves a particle along a path <span class="math">\(C\)</span> which is defined by the relationship <span class="math">\(y=x^3\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>.</p>
+<div class="compute"><script type="text/x-sage">
+var('x,y')
+
+Fx=3*x^2 + 4*y^2
+Fy=x*y
+
+integrand=Fx.subs(y=x^3) + 3*x^2*Fy.subs(y=x^3)
+
+show(integrand)
+
+integrate(integrand,x,0,2)
+</script></div>
+
+</div><div id="multi-variable-calculus-double-integrals-sec.-1.14" class="slide section level2">
+<h1>Multi-variable calculus \\ Double integrals (sec. 1.14)</h1>
+<p>Let <span class="math">\(R\)</span> denote the rectangle in the <span class="math">\(xy\)</span>-plane over the range <span class="math">\(a \leq x \leq b\)</span> and <span class="math">\(c \leq y \leq d\)</span>. The integral <span class="math">\[
+I = \iint\limits_{R} \, f(x,y) \, dx \, dy,
+\]</span> denotes the <em>double integral</em> of <span class="math">\(f\)</span> over the region <span class="math">\(R\)</span>. <strong>This represents the volume lying over the region <span class="math">\(R\)</span> and below the surface defined by <span class="math">\(f\)</span>.</strong> Such integrals can be evaluated by treating them as <em>repeated integrals</em>, i.e. a system of nested integrals which can be evaluated by beginning with the innermost integral and working out, <span class="math">\[
+\begin{align}
+I &amp;= \iint\limits_{R} \, f(x,y) \, dx \, dy, \\
+&amp;= \int_c^d \, \left ( \int_a^b \, f(x,y) \, dx \right ) \, dy.
+\end{align}
+\]</span></p>
+<div class="figure">
+<img src="int-over-rect.png" alt="Fig." /><p class="caption">Fig.</p>
+</div>
+<h3 id="example-1.18">Example 1.18</h3>
+<p>Integrate the function <span class="math">\[
+f(x,y) = 2xy + 4x + 3y + 1,
+\]</span> over the ractangular region bounded by <span class="math">\(x=0\)</span>, <span class="math">\(x=2\)</span>, <span class="math">\(y=1\)</span> and <span class="math">\(y=3\)</span>.</p>
+<div class="compute"><script type="text/x-sage">
+var('x,y')
+
+integrand=2*x*y + 4*x + 3*y + 1
+
+integrand.integrate(x,0,2)
+</script></div>
+
+</div><div id="multi-variable-calculus-evaluation-techniques-seperable-functions-and-reversing-the-order-sec.-1.15" class="slide section level2">
+<h1>Multi-variable calculus \\ Evaluation techniques: seperable functions and reversing the order (sec. 1.15)</h1>
+<p>In the special case where the function <span class="math">\(f\)</span> is , i.e. <span class="math">\[
+f(x,y) = g(x) h(y),
+\]</span> then the integral over a rectangular region becomes the product of the two integrals as follows <span class="math">\[
+\int_c^d \int_a^b \, f(x,y) \, dx \, dy 
+= \left ( \int_c^d \, h(y) \, dy \right ) \left ( \int_a^b \, g(x) \, dx \right ) .
+\]</span> Another technique that can be used is reversing the order of integration, i.e. <span class="math">\[
+\int_c^d \int_a^b \, f(x,y) \, dx \, dy 
+= \int_a^b \int_c^d \, f(x,y)  \, dy \, dx .
+\]</span></p>
+<h3 id="example-1.19">Example 1.19</h3>
+<p>Evaluate the integral <span class="math">\[
+I = \int_0^1 \int_{0.2}^{0.8} \, x \cos(xy) \, dx \, dy .
+\]</span></p>
+<div class="compute"><script type="text/x-sage">
+var('x,y')
+
+integrand=x*cos(x*y)
+
+integrand.integrate(x,0.2,0.8)
+</script></div>
+
+</div><div id="multi-variable-calculus-double-integrals-over-non-rectangular-regions-sec.-1.16" class="slide section level2">
+<h1>Multi-variable calculus \\ Double integrals over non-rectangular regions (sec. 1.16)</h1>
+<p>Non-rectangular regions are characterised by limits for the <span class="math">\(x\)</span> and/or <span class="math">\(y\)</span> variables that are not constants. Such integrals can still be evaluated by considering them as repeated integrals. However care is needed when reversing the order of integration as this will require careful handling of the limits of integratio, as shown by the following examples.</p>
+<h3 id="example-1.20">Example 1.20</h3>
+<p>Integrate the function <span class="math">\[
+f(x,y) = 4x^3 + 4y^3, 
+\]</span> over the region <span class="math">\(R\)</span> bounded by the <span class="math">\(x=2\)</span>, <span class="math">\(y=1\)</span> and <span class="math">\(y=x^2\)</span>.</p>
+<p><em>See notes and visualizer for evaluation</em></p>
+<div class="figure">
+<img src="int-horiz-strip.png" alt="Fig." /><p class="caption">Fig.</p>
+</div>
+<div class="figure">
+<img src="int-vert-strip.png" alt="Fig." /><p class="caption">Fig.</p>
+</div>
+</div><div id="multi-variable-calculus-changing-coordinates-sec.-1.17" class="slide section level2">
+<h1>Multi-variable calculus \\ Changing coordinates (sec. 1.17)</h1>
+<p>In all the examples we have met so far we have consistently integrated using the usual Cartesian coordinate system <span class="math">\((x,y)\)</span>. It is possible however to integrate with respect to other coordinate systems.</p>
+<p>Recall that in the single-variable case we can use the technique of substitution, <span class="math">\[
+\int \, f(x) \, dx = \int \, f \big ( x(t) \big ) \frac{dx}{dt} \, dt .
+\]</span> This converts/translates the original integral, which was with respect to the variable <span class="math">\(x\)</span>, to an equivalent integral which is now with respect to the variable <span class="math">\(t\)</span>.</p>
+<p>For multi-variable integrals we translate to a new coordinate system using the absolute value of the Jacobian determinant of the transformation as follows, <span class="math">\[
+\iint\limits_{R} \, f(x,y) \, dx \, dy 
+= \iint\limits_{R} \, f \big ( x(s,t), \, y(s,t) \big ) \left | \frac{\partial (x,y)}{\partial (s,t)} \right | \, ds \, dt . \label{E:multisubs}
+\]</span></p>
+<h3 id="example-1.21">Example 1.21</h3>
+<p>Evaluate the integral <span class="math">\[
+\iint\limits_{R} \, \frac{1}{x^2 + y^2} \, dx \, dy ,
+\]</span> where <span class="math">\(R\)</span> is the annular region in the plane bounded by the circles of radius <span class="math">\(a\)</span> and <span class="math">\(b\)</span> in the 1st quadrant as shown in figure.</p>
+<div class="figure">
+<img src="int-annular.png" alt="Fig." /><p class="caption">Fig.</p>
+</div>
+<p>This approach generalises to dealing with integrals of functions of three or more variables. When changing from a coordinate system <span class="math">\((x_1, \dots, x_n)\)</span> to a new coordinate system <span class="math">\((u_1, \dots , u_n)\)</span> we use <span class="math">\[
+\begin{align}
+&amp;\idotsint\limits_{R}\, f(x_1, \dots, x_n) \, dx_1  \dots  \, dx_n \label{E:gensubs}\\
+&amp;= \idotsint\limits_{R} \, f \big (\dots x_i(u_1,\dots,u_n),\dots \big ) \left | \frac{\partial (x_1,\dots, x_n)}{\partial (u_1, \dots , u_n)} \right | \, du_1  \dots du_n . \nonumber
+\end{align}
+\]</span></p>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>
