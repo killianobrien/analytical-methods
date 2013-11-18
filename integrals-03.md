@@ -16,7 +16,7 @@ $$y=(x+1)^2, \, \, x=y-y^3, \, \, x=-1, \,\, y=-1.$$
 
 1. Evaluate 
 $$\iint\limits_{R} 3x \, dA ,$$
-where the region of integration $R$ is the region in the upper half-plane bounded by the circles of radii 1 and 2.
+where the region of integration $R$ is the region in the upper half-plane bounded by the circles of radii 1 and 2, centred on the origin.
 
 
 1. Evaluate the integral 
@@ -25,7 +25,7 @@ where the integral is taken over the disc $D$ in the $xy$-plane of radius 5.
 
 2. Evaluate the following triple integral
 $$ \iiint\limits_{R} \, z \, dx \, dy \, dz ,$$
-where the integral is taken over the region $R$ of $xyz$-space consisting of the upper-half ($z \geq 0$) of the ball of radius 1.
+where the integral is taken over the region $R$ of $xyz$-space consisting of the upper-half ($z \geq 0$) of the ball of radius 1, centred on the origin.
 
 
 
